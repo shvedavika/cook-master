@@ -1,0 +1,23 @@
+.event-filter-block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__header {
+    text-align: center;
+  }
+}
+.event-filter-row {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__toggler {
+    position: relative;
+    top: 1px;
+  }
+  &__text {
+    vertical-align: middle;
+  }
+}

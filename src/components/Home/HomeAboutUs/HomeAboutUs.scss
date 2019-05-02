@@ -1,0 +1,23 @@
+@import "../../../Global";
+
+.home-about-us {
+  background-image: url(./assets/about-us.jpg);
+  height: 220px;
+  background-position: 50% 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 29px;
+  text-align: center;
+  @include padding-around;
+
+  &__text {
+    background: #8080807d;
+    @include md {
+      font-size: 23px;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../Global";
+
+.event {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    max-height: 200px;
+    max-width: 200px;
+    object-position: center;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 18px;
+  }
+
+  &__description {
+    display: inline-block;
+  }
+
+  &__price {
+    &:before {
+      content: '$';
+      display: inline-block;
+    }
+  }
+}

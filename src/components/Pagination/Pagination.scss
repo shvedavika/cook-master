@@ -1,0 +1,31 @@
+@import "../../Global";
+
+.pagination {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  list-style: none;
+  width: 100px;
+  align-self: flex-end;
+  padding: 0;
+  &__items {
+    width: 55px;
+    overflow: hidden;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    padding: 0 5px;
+    font-weight: 500;
+    transition: background-color 1s;
+    cursor: pointer;
+    &:hover {
+      background-color: lightgrey;
+    }
+    &--active {
+      @include default-green-background;
+    }
+  }
+}

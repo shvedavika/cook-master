@@ -1,0 +1,67 @@
+@mixin xs() {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin sm() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin md() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin padding-around {
+  padding: 40px 10%;
+
+  @include lg {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  @include md {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+@mixin margin-around {
+  margin: 40px 10%;
+
+  @include lg {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  @include md {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@mixin padding-left-right {
+  padding: 0 10%;
+
+  @include lg {
+    padding: 0 6%;
+  }
+
+  @include md {
+    padding: 0 3%;
+  }
+}
+@mixin default-color {
+  color: #34A576;
+}
+@mixin default-green-background {
+  background: #34A576;
+}
+@mixin default-shadow {
+  box-shadow: 2px 2px 19px 2px #0000003b;
+}

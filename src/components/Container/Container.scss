@@ -1,0 +1,13 @@
+@import "../../Global";
+
+.home-container {
+  @include default-shadow;
+  @include margin-around;
+  margin-bottom: 0;
+}
+.events-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+}
