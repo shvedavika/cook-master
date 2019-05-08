@@ -1,5 +1,23 @@
+@import "../../Global";
+
 .event-filters {
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 17%;
+  @include lg {
+    width: 20%;
+  }
+  @include md {
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    top: 55px;
+    margin-bottom: 50px;
+  }
+  @include sm {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 }

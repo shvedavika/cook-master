@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Pagination.scss';
 import {connect} from "react-redux";
@@ -6,72 +6,91 @@ import {setPageNumber} from "../../reducers/eventReducer";
 import PropTypes from "prop-types";
 
 function Pagination(props) {
-  const {buttonsLimit, buttonsTotalCount} = props;
+  const {page, limit, totalCount} = props;
+  let pages = generateItems(page, limit, totalCount);
 
-  let paginationItems = [];
-  for(let i=1; i<= buttonsTotalCount; i++) {
-    paginationItems.push(i);
-  }
+  return (
+    <>
+      {!pages.length ? null :
+        <ul className="pagination">
+        <li>
+          <FontAwesomeIcon onClick={() => handleClick('prev')}
+            icon={['fa', 'chevron-left']}
+            className="pagination__item"/>
+        </li>
 
-  // const centerPaginationItems = (buttonId) => {
-  //   let buttons = [...paginationItems].slice(0, buttonsLimit);
-  //   if(activeButton > buttonsLimit){
-  //     buttons = [...paginationItems].slice(1, buttonsLimit);
-  //   }
-  // };
+        <ul className="pagination__items">
+          {pages.map(number => (
+            <li
+              key={number}
+              className={page === number ? 'pagination__item pagination__item--active' : 'pagination__item'}
+              onClick={() => handleClick(number)}
+            >
+              {number}
+            </li>
+          ))}
+        </ul>
 
-  let [activeButton, setActiveButton] = useState(1);
+        <li>
+          <FontAwesomeIcon onClick={() => handleClick('next')}
+            icon={['fa', 'chevron-right']}
+            className="pagination__item"/>
+        </li>
+      </ul>
+      }
+    </>
+  );
 
-  const handleClick = (e) => {
-    const targetId = e.target.id;
+  function handleClick(number) {
+    const isMoreThenInRange = number === 'next' && page >= totalCount;
+    const isLessThenInRange = number === 'prev' && page <= 1;
 
-    if(targetId === 'next' && activeButton !== buttonsTotalCount){
-      setActiveButton(activeButton+1);
-      props.setPageNumber(activeButton);
-    } else if(targetId === 'previous') {
-      if(activeButton === 1){return;}
-      setActiveButton(activeButton-1);
-      props.setPageNumber(activeButton);
-    } else if(activeButton !== buttonsTotalCount || activeButton === 1){
-      const targetId = +e.target.id;
-      setActiveButton(targetId);
-      props.setPageNumber(targetId);
+    if (isMoreThenInRange || isLessThenInRange) {
+      return;
     }
-  };
 
-  const renderPaginationItems = paginationItems.map(number => {
-    const className = activeButton === number ? 'pagination__item pagination__item--active' : 'pagination__item';
-    return(
-      <li
-        key={number}
-        className={className}
-        id={number}
-        onClick={handleClick}
-      >
-        {number}
-      </li>
-    )
-  });
-  return(
-    <ul className="pagination">
-      <li>
-        <FontAwesomeIcon onClick={handleClick} id="previous" icon={['fa', 'chevron-left']} className="pagination__item"/>
-      </li>
-      <ul className="pagination__items">{renderPaginationItems}</ul>
-      <li>
-        <FontAwesomeIcon onClick={handleClick} id="next" icon={['fa', 'chevron-right']} className="pagination__item"/>
-      </li>
-    </ul>
-  )
+    if(number === 'next'){
+      const nextPage = page + 1;
+      props.setPageNumber(nextPage);
+      return;
+    }
+
+    if(number === 'prev') {
+      const prevPage = page - 1;
+      props.setPageNumber(prevPage);
+      return;
+    }
+
+    const newPage = +number;
+    props.setPageNumber(newPage);
+  }
 }
+
+function generateItems(current, limit, total) {
+  const around = (limit - 1) / 2;
+  const from = current - around;
+  const fromMax = Math.max(from, 1);
+  const fromMaxMin = Math.min(fromMax, total - limit + 1);
+  if(total < limit && total <= 1) {
+    return [];
+  }
+  //добавила:
+  if(!fromMaxMin) {
+    return Array.from({length: total}, (value, index) => 1 + index);
+  }
+  return Array.from({length: limit}, (value, index) => fromMaxMin + index);
+}
+
 export default connect(
-  null,
+  state => ({
+    page: state.event.page
+  }),
   {
-    setPageNumber
+    setPageNumber,
   }
 )(Pagination);
 
 Pagination.propTypes = {
-  buttonsLimit: PropTypes.number.isRequired,
-  buttonsTotalCount: PropTypes.number.isRequired,
+  limit: PropTypes.number.isRequired,
+  totalCount: PropTypes.number.isRequired,
 };

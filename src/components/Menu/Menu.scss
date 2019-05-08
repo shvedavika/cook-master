@@ -1,0 +1,21 @@
+@import "../../Global";
+
+.menu {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  @include default-color-border;
+  &__image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.menu-header {
+  @include default-page-header;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
+}

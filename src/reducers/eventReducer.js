@@ -19,7 +19,7 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  let stateToUpdate = [...state.events];
+  let stateToUpdate = [...state.eventsFiltered];
   switch (action.type) {
     case EVENT_SORT_BY: {
       if (action.payload === 'name-asc') {
@@ -61,7 +61,7 @@ export default function (state = initialState, action) {
           return dateB - dateA;
         })
       }
-      if(action.payload === ''){
+      if(action.payload === ' '){
         return {
           ...state,
           eventsFiltered: [...state.events],
@@ -70,6 +70,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         eventsFiltered: stateToUpdate,
+        page: 1,
       }
     }
     case EVENT_LOADED_SUCCESSFULLY: {
@@ -102,6 +103,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         eventsFiltered,
+        page: 1,
       }
     }
     case SET_PAGE_NUMBER: {

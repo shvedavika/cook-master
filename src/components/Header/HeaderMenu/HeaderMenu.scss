@@ -1,0 +1,64 @@
+@import "../../../Global";
+
+.home-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 5px 0;
+  font-weight: bold;
+  color: white;
+  height: fit-content;
+  z-index: 1;
+  background: #00000047;
+  @include sm {
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    height: fit-content;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:not(:last-child):after {
+      content: '|';
+      display: inline-block;
+      height: 100%;
+      margin: 0 10px;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    &:hover .home-sub-menu {
+      display: block;
+      position: absolute;
+      list-style: none;
+    }
+    @include sm {
+      font-size: 26px;
+    }
+  }
+}
+.home-sub-menu {
+  display: none;
+  width: max-content;
+  line-height: 30px;
+  padding: 10px 0 0;
+  background: #00000047;
+
+  &__item {
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      background: #d3d3d34f;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+}

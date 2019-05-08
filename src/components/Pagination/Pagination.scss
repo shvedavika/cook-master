@@ -5,11 +5,10 @@
   align-items: flex-end;
   justify-content: space-between;
   list-style: none;
-  width: 100px;
   align-self: flex-end;
   padding: 0;
+  margin-top: 50px;
   &__items {
-    width: 55px;
     overflow: hidden;
     display: flex;
     list-style: none;
@@ -17,15 +16,16 @@
     margin: 0;
   }
   &__item {
-    padding: 0 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
     font-weight: 500;
-    transition: background-color 1s;
+    transition: background-color 0.3s;
     cursor: pointer;
     &:hover {
       background-color: lightgrey;
     }
     &--active {
-      @include default-green-background;
+      background-color: lightgrey;
     }
   }
 }

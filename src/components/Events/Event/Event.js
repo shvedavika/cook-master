@@ -8,7 +8,7 @@ export default function Event(props) {
     <article className="event">
       <img className="event__image" src={event.image} alt="event"/>
       <div className="event__info">
-        <span>{event.date}</span>
+        <span className="event__date">{event.date}</span>
         <h3 className="event__header">{event.name}</h3>
         <span className="event__price">{event.price}</span>
         <p className="event__description">{event.description}</p>

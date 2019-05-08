@@ -1,5 +1,11 @@
+@import "../../Global";
+
 .events-sort {
   align-self: flex-start;
   font-size: 15px;
   outline: none;
+  @include md {
+    position: absolute;
+    right: 50px;
+  }
 }

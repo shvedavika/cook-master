@@ -4,10 +4,12 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 class Container extends React.Component {
   render() {
-    const {eventsPage} = this.props;
+    const {eventsPage, menuPage} = this.props;
     let className = 'home-container';
     if (eventsPage) {
       className += ' events-container';
+    } else if(menuPage) {
+      className += ' menu-container';
     }
     return(
       <>

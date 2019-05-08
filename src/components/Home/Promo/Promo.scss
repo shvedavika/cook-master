@@ -18,9 +18,7 @@
   }
 
   &__header {
-    font-size: 30px;
-    text-align: center;
-    margin: 40px;
+    @include default-page-header;
   }
 }
 
@@ -34,6 +32,9 @@
   padding: 13px 20px;
   justify-content: center;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  text-align: center;
   @include default-shadow;
   @include lg {
     padding: 13px 10px;

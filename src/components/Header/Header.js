@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import HomeMenu from "./Menu/Menu";
+import HeaderMenu from "./HeaderMenu/HeaderMenu";
 import './Header.scss';
 import background1 from './assets/11.jpg';
 import background2 from './assets/22.jpg';
@@ -13,7 +13,7 @@ export default function Header() {
       <img className="home-header__background" src={background1} alt="header"/>
       <img className="home-header__background" src={background2} alt="header"/>
       <img className="home-header__background" src={background3} alt="header"/>
-      <HomeMenu/>
+      <HeaderMenu/>
     </header>
   )
 }

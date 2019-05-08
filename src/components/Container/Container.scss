@@ -10,4 +10,15 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 50px;
+  @include md {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+  }
+}
+.menu-container {
+  background-color: #d3d3d36e;
+  min-height: 500px;
+  padding: 50px;
 }

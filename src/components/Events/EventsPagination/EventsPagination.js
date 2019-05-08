@@ -12,13 +12,13 @@ function EventsPagination(props) {
   return (
     <section className="events-pagination">
       <Events limitEventsPerPage={limitEventsPerPage}/>
-      <Pagination buttonsLimit={3} buttonsTotalCount={buttonsTotalCount}/>
+      <Pagination limit={3} totalCount={buttonsTotalCount}/>
     </section>
   )
 }
 export default connect(
   state => ({
-    events: state.event.events,
+    events: state.event.eventsFiltered,
   })
 )(EventsPagination);
 

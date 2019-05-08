@@ -1,6 +1,7 @@
 import React from 'react';
-import './Promo.scss';
+import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import './Promo.scss';
 
 export default function Promo() {
   return (
@@ -21,13 +22,15 @@ export default function Promo() {
             Quickly choose an appropriate table using our interactive booking system.
           </p>
         </article>
-        <article className="promo-proposal">
-          <FontAwesomeIcon className="promo-proposal__icon"  icon={['fa', 'calendar-check']}/>
-          <h3 className="promo-proposal__header">Search for events</h3>
-          <p className="promo-proposal__text">
-            Miscellaneous events are available for absolutely all ages, make your daily routine gripping.
-          </p>
-        </article>
+        <NavLink to="/events" className="promo-proposal">
+          <article>
+            <FontAwesomeIcon className="promo-proposal__icon"  icon={['fa', 'calendar-check']}/>
+            <h3 className="promo-proposal__header">Search for events</h3>
+            <p className="promo-proposal__text">
+              Miscellaneous events are available for absolutely all ages, make your daily routine gripping.
+            </p>
+          </article>
+        </NavLink>
       </section>
     </section>
   )

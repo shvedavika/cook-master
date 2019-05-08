@@ -7,7 +7,7 @@ export default function BreadcrumbsItem({match, history}) {
     <li className={match.isExact ? 'breadcrumb-active' : undefined}>
       <Link to={match.url || ''}>
         {match.url}
-        {console.log({history})}
+        {console.log({match})}
       </Link>
     </li>
     {/*<Route path={`${match.url}/:path`} component={BreadcrumbsItem} />*/}
