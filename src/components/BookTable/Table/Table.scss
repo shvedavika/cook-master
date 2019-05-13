@@ -1,0 +1,53 @@
+@import "./../../../Global";
+
+.book-table-seat {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border: 1px solid green;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  user-select: none;
+
+  &:before, &:after {
+    content: '';
+    border: 2px solid gray;
+    width: 30px;
+    height: 25px;
+    display: block;
+    position: relative;
+    background-color: rgba(139, 69, 19, 0.15);
+  }
+  &:before {
+    left: -30px;
+    border-right: 1px solid lightgrey;
+    border-radius: 10px 0 0 10px;
+  }
+  &:after {
+    right: -30px;
+    border-left: 1px solid lightgrey;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &--free {
+    background: #34a57666;
+    &:hover {
+      background: rgba(52, 165, 118, 0.17);
+    }
+  }
+  &--busy {
+    background: #ff00003d;
+    border: 1px solid red;
+    &:hover {
+      cursor: not-allowed;
+      background: rgba(255, 0, 0, 0.14);
+    }
+  }
+  &--selected {
+    background: #34a576;
+  }
+}

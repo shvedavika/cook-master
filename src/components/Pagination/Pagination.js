@@ -1,7 +1,7 @@
 import React from 'react';
+import {connect} from "react-redux";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './Pagination.scss';
-import {connect} from "react-redux";
 import {setPageNumber} from "../../reducers/eventReducer";
 import PropTypes from "prop-types";
 
@@ -74,7 +74,7 @@ function generateItems(current, limit, total) {
   if(total < limit && total <= 1) {
     return [];
   }
-  //добавила:
+
   if(!fromMaxMin) {
     return Array.from({length: total}, (value, index) => 1 + index);
   }

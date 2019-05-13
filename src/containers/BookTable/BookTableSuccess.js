@@ -1,11 +1,10 @@
 import React from 'react';
 import Container from "../../components/Container/Container";
-import BookTable from "../../components/BookTable/BookTable";
 
-export default function BookTablePage() {
+export default function BookTableSuccess() {
   return (
     <Container bookTablePage>
-      <BookTable/>
+      <h2>Thank you for your order.<br/>We will get in touch with you soon.</h2>
     </Container>
   )
 }

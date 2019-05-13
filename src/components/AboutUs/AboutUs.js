@@ -10,6 +10,7 @@ import restaurantImage6 from './assets/about6.jpg';
 export default function AboutUs() {
   return (
     <section className="about-us">
+      <h2 className="about-us__header">About us</h2>
       <p className="about-us__text">
         Our restaurant is a modern place with own unique menu offering gastronomic and designer’s dishes and an
         impressive cocktail card.<br/>

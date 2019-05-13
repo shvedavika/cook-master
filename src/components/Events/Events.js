@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect} from 'react';
 import {connect} from "react-redux";
 import Event from "./Event/Event";
 import './Events.scss';

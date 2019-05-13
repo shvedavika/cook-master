@@ -20,12 +20,7 @@
 }
 
 @mixin padding-around {
-  padding: 40px 10%;
-
-  @include lg {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
+  padding: 40px 5%;
 
   @include md {
     padding-left: 3%;

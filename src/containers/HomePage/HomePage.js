@@ -6,10 +6,12 @@ import HomeAboutUs from "../../components/Home/HomeAboutUs/HomeAboutUs";
 
 export default function HomePage() {
   return (
-    <Container>
-      <Promo/>
-      <TopDishes/>
+    <>
+      <Container>
+        <Promo/>
+        <TopDishes/>
+      </Container>
       <HomeAboutUs/>
-    </Container>
+    </>
   )
 }

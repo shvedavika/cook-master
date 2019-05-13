@@ -21,6 +21,7 @@
     font-weight: 500;
     transition: background-color 0.3s;
     cursor: pointer;
+    user-select: none;
     &:hover {
       background-color: lightgrey;
     }

@@ -8,20 +8,24 @@ export default function Promo() {
     <section className="promo">
       <h2 className="promo__header">How you can use this app</h2>
       <section className="promo__proposals">
-        <article className="promo-proposal">
+        <NavLink to="/menu" className="promo-proposal">
+        <article>
           <FontAwesomeIcon className="promo-proposal__icon" icon={['fa', 'utensils']}/>
           <h3 className="promo-proposal__header">Find favorite dish</h3>
           <p className="promo-proposal__text">
             A huge variety of dishes are proposed, find the best match for you and enjoy it.
           </p>
         </article>
-        <article className="promo-proposal">
+        </NavLink>
+        <NavLink to="/book-table" className="promo-proposal">
+        <article>
           <FontAwesomeIcon className="promo-proposal__icon"  icon={['fa', 'pen-alt']}/>
           <h3 className="promo-proposal__header">Book table</h3>
           <p className="promo-proposal__text">
             Quickly choose an appropriate table using our interactive booking system.
           </p>
         </article>
+        </NavLink>
         <NavLink to="/events" className="promo-proposal">
           <article>
             <FontAwesomeIcon className="promo-proposal__icon"  icon={['fa', 'calendar-check']}/>

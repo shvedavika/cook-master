@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import MenuPage from "./containers/MenuPage/MenuPage";
 import BookTablePage from "./containers/BookTable/BookTablePage";
+import BookTableSuccess from "./containers/BookTable/BookTableSuccess";
 
 export default (
   <>
@@ -16,6 +17,7 @@ export default (
     <Route exact path="/events" component={EventsPage}/>
     <Route exact path="/menu" component={MenuPage}/>
     <Route exact path="/book-table" component={BookTablePage}/>
+    <Route exact path="/book-table-success" component={BookTableSuccess}/>
     <Footer/>
   </>
 );

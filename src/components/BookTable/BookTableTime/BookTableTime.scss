@@ -1,0 +1,12 @@
+.book-time {
+  display: flex;
+  align-items: center;
+  &__name {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &__field {
+    font-size: 14px;
+    width: 160px;
+  }
+}
