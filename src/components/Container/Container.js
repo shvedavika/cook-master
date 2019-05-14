@@ -1,30 +1,35 @@
 import React from 'react';
 import './Container.scss';
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import AutoCompleteSearch from "../AutoCompleteSearch/AutoCompleteSearch";
+import {withRouter} from "react-router-dom";
+import Search from "../Search/Search";
 
-class Container extends React.Component {
-  render() {
-    const {eventsPage, menuPage, bookTablePage} = this.props;
-    let className = 'home-container';
-    if (eventsPage) {
-      className += ' events-container';
-    } else if(menuPage) {
-      className += ' menu-container';
-    } else if(bookTablePage) {
-      className += ' book-table-container';
-    }
-    return(
-      <>
-        <section className="navigation">
-          <Breadcrumbs/>
-          <AutoCompleteSearch/>
-        </section>
-        <section className={className}>
-          {this.props.children}
-        </section>
-      </>
-    )
+function Container(props) {
+  const {eventsPage, menuPage, bookTablePage, contactsPage, eventPage} = props;
+  let className = 'home-container';
+  if (eventsPage) {
+    className += ' events-container';
+  } else if(menuPage) {
+    className += ' menu-container';
+  } else if(bookTablePage) {
+    className += ' book-table-container';
+  } else if(contactsPage){
+    className += ' contacts-container';
+  } else if(eventPage) {
+    className += ' event-container';
   }
+
+  return(
+    <>
+      <section className="navigation">
+        <Breadcrumbs {...props}/>
+        <Search/>
+      </section>
+      <section className={className}>
+        {props.children}
+      </section>
+    </>
+  )
 }
-export default Container;
+
+export default withRouter(Container);

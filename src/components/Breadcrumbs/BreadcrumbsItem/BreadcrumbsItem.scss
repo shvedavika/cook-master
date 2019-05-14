@@ -1,0 +1,28 @@
+.breadcrumb {
+  display: inline-block;
+  list-style: none;
+  color: black;
+  &:not(:last-child):after {
+    content: '/';
+    display: inline;
+    margin: 0 4px;
+  }
+  &__link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &--active {
+      text-decoration: none;
+      cursor: default;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:active {
+      color: black;
+    }
+  }
+}

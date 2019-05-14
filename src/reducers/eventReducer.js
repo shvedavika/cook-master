@@ -1,19 +1,44 @@
-export const eventSortBy = property => ({type: EVENT_SORT_BY, payload: property});
+import {fetchEvents} from "../containers/EventsPage/EventsHelper";
+
+export const eventsSortBy = property => ({type: EVENT_SORT_BY, payload: property});
 const EVENT_SORT_BY = 'event/sort';
 
-
-export const eventFilterBy = property => ({type: EVENT_FILTER_BY, payload: property});
+export const eventsFilterBy = property => ({type: EVENT_FILTER_BY, payload: property});
 const EVENT_FILTER_BY = 'event/filter';
 
+export const eventsLoadedSuccessfully = events => ({type: EVENTS_LOADED_SUCCESSFULLY, payload: events});
+const EVENTS_LOADED_SUCCESSFULLY = 'event/events_loaded_successfully';
 
-export const eventLoadedSuccessfully = events => ({type: EVENT_LOADED_SUCCESSFULLY, payload: events});
-const EVENT_LOADED_SUCCESSFULLY = 'event/loaded_successfully';
+export const eventLoad = () => ({type: EVENT_LOAD});
+const EVENT_LOAD = 'event/event_load';
+
+export const eventLoadedSuccessfully = event => ({type: EVENT_LOADED_SUCCESSFULLY, payload: event});
+const EVENT_LOADED_SUCCESSFULLY = 'event/event_loaded_successfully';
 
 export const setPageNumber = number => ({type: SET_PAGE_NUMBER, payload: number});
 const SET_PAGE_NUMBER = 'event/set_page';
 
+export function loadEvents() {
+  return (dispatch) => {
+    fetchEvents()
+      .then((events) => dispatch(eventsLoadedSuccessfully(events)));
+  }
+}
+export function loadEvent(id) {
+  return (dispatch) => {
+    dispatch(eventLoad());
+    fetchEvents()
+      .then((events) => {
+        const idNumber = Number(id);
+        const event = events.find((event) => event.id === idNumber);
+        dispatch(eventLoadedSuccessfully(event));
+      });
+  }
+}
+
 const initialState = {
   events: [],
+  event: null,
   eventsFiltered: [],
   page: 1,
 };
@@ -73,11 +98,23 @@ export default function (state = initialState, action) {
         page: 1,
       }
     }
-    case EVENT_LOADED_SUCCESSFULLY: {
+    case EVENTS_LOADED_SUCCESSFULLY: {
       return {
         ...state,
         events: action.payload,
         eventsFiltered: action.payload,
+      };
+    }
+    case EVENT_LOAD: {
+      return {
+        ...state,
+        event: null,
+      };
+    }
+    case EVENT_LOADED_SUCCESSFULLY: {
+      return {
+        ...state,
+        event: action.payload,
       };
     }
     case EVENT_FILTER_BY: {

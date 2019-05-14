@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {getCurrentDate, getCurrentTime} from "../components/BookTable/BookTableCalendar/dateHelper";
 
 export const tablesLoadedSuccessfully = tables => ({type: TABLES_LOAD_SUCCESSFULLY, payload: tables});
@@ -17,6 +18,13 @@ const BOOK_TABLE = 'tables/book-table';
 
 export const saveBookedTable = table => ({type: SAVE_BOOKED_TABLE, payload: table});
 const SAVE_BOOKED_TABLE = 'tables/save-booked-table';
+
+export function loadTables() {
+  return (dispatch) => {
+    axios.get('/tables.json')
+      .then(({data}) => dispatch(tablesLoadedSuccessfully(data)));
+  };
+}
 
 const initialState = {
   tables: [],

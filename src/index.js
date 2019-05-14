@@ -13,7 +13,7 @@ library.add(fas, far);
 
 const store = configureStore();
 export const renderApp = () => {
-  const App = props => {
+  const App = () => {
     return(
       <Provider store={store}>
         <Router>

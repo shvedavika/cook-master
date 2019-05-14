@@ -3,6 +3,7 @@
 .promo {
   font-size: 20px;
   @include padding-around;
+  padding-top: 10px;
 
   &__proposals {
     display: flex;

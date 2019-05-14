@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   align-items: baseline;
   @include default-color-border;
+  box-shadow: 0 0 10px lightgrey;
   &__image {
     height: 200px;
     width: 100%;

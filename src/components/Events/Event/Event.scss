@@ -20,6 +20,7 @@
     @include xs {
       order: 5;
       align-self: center;
+      margin-right: 0;
     }
   }
 
@@ -47,6 +48,7 @@
     display: inline-block;
     @include xs {
       order: 4;
+      text-align: justify;
     }
   }
 

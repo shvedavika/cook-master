@@ -2,14 +2,13 @@ import React, { useEffect} from 'react';
 import {connect} from "react-redux";
 import Event from "./Event/Event";
 import './Events.scss';
-import {eventLoadedSuccessfully} from "../../reducers/eventReducer";
-import EVENTS_FROM_BACKEND from "../../reducers/eventsData";
+import {loadEvents} from "../../reducers/eventReducer";
 import PropTypes from 'prop-types';
 
 function Events(props) {
-  const {limitEventsPerPage, eventLoadedSuccessfully} = props;
+  const {limitEventsPerPage, loadEvents} = props;
   useEffect(() => {
-    eventLoadedSuccessfully(EVENTS_FROM_BACKEND);
+    loadEvents();
   }, []);
 
   const offset = (props.page - 1) * limitEventsPerPage;
@@ -30,7 +29,7 @@ export default connect(
     page: state.event.page,
   }),
   {
-    eventLoadedSuccessfully,
+    loadEvents,
   }
 )(Events);
 

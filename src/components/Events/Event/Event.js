@@ -6,7 +6,7 @@ export default function Event(props) {
   const {event} = props;
   return(
     <article className="event">
-      <img className="event__image" src={event.image} alt="event"/>
+      <img className="event__image" src={`/assets/events/${event.image}`} alt="event"/>
       <div className="event__info">
         <span className="event__date">{event.date}</span>
         <h3 className="event__header">{event.name}</h3>

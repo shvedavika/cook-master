@@ -1,18 +1,21 @@
 @import "../../../Global";
 
+.home-menu-container {
+    width: 60%;
+    z-index: 1;
+}
 .home-menu {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  padding: 5px 0;
   font-weight: bold;
-  color: white;
+  color: black;
   height: fit-content;
-  z-index: 1;
-  background: #00000047;
-  @include sm {
-    padding: 0;
-  }
+  z-index: 2;
+  box-shadow: 0 0 15px lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+  background: #ffffffc2;
 
   &__item {
     position: relative;
@@ -36,7 +39,7 @@
       list-style: none;
     }
     @include sm {
-      font-size: 26px;
+      font-size: 24px;
     }
   }
 }
@@ -44,21 +47,22 @@
   display: none;
   width: max-content;
   line-height: 30px;
-  padding: 10px 0 0;
-  background: #00000047;
+  padding: 0;
+  background: #ffffffc2;
+  box-shadow: 0 0 15px rgba(211, 211, 211, 0.77);
+  left: -5px;
+  z-index: 1;
 
   &__item {
     font-size: 20px;
     cursor: pointer;
+    padding: 5px;
     &:hover {
-      background: #d3d3d34f;
-    }
-    @include sm {
-      font-size: 20px;
+     background: rgba(128, 128, 128, 0.4);
     }
   }
   &__link {
-    color: white;
+    color: black;
     text-decoration: none;
     user-select: none;
   }

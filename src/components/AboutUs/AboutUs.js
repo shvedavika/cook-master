@@ -16,18 +16,15 @@ export default function AboutUs() {
         impressive cocktail card.<br/>
         Just after opening, the restaurant appeared on the pages of London’s “Wall Paper” that appreciated the original
         interior design. It is no wonder that every detail has been designed to surprise guests harmoniously matching
-        with a unified stylish concept. The main idea lies in innovation, uniqueness, and atmosphere.
+        with a unified stylish concept.
       </p>
-      <p className="about-us__text">
+      <p className="about-us__text about-us__text--hidden-small">
         One of the best chefs in Ukraine rules the kitchen. According to his opinion, the restaurant menu is indirectly
         related to the traditional Ukraine cuisine. All the dishes – designer’s and gastronomic – created on the
         principle of interesting and complex combinations of ingredients. The menu is updated on monthly basis for the
-        visitors to enjoy seasonal products served in a very non-standard way. Creative serving is a highlight of the
-        restaurant. So, do not be surprised if your dish is served in the dry ice smoke or cooked right at you!
-        Many meat and fish dishes are cooked in Big Green Egg ovens that bring incredible juicy products with an
-        appetizing smoke flavor.
+        visitors to enjoy seasonal products served in a very non-standard way.
       </p>
-      <p className="about-us__text">
+      <p className="about-us__text--hidden-small">
         We propose a comfortable area with modern gadgets and games is arranged for children where professional
         animators make real holidays for small visitors. At the same time, their parents are able to calmly and
         leisurely enjoy food and chat with friends.<br/>

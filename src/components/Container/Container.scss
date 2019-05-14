@@ -2,17 +2,24 @@
 
 .home-container {
   max-width: 1200px;
-  margin: auto;
-  margin-bottom: 0;
+  margin: auto auto 0;
+  min-height: 450px;
 }
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @include margin-around();
+  @include margin-around;
   margin-top: 25px;
   margin-bottom: 25px;
   align-items: center;
+  @include xs {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .events-container {
   display: flex;
@@ -27,16 +34,27 @@
   }
 }
 .menu-container {
-  background-color: #d3d3d36e;
   min-height: 500px;
-  padding: 40px 5%;
+  padding: 0 5% 40px;
 }
 .book-table-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   @include padding-around;
+  padding-top: 0;
   @include md {
     padding: 0 3%;
   }
+}
+.contacts-container {
+  @include padding-around;
+  display: flex;
+  justify-content: space-between;
+  @include md {
+    flex-direction: column;
+  }
+}
+.event-container {
+  @include padding-around;
 }

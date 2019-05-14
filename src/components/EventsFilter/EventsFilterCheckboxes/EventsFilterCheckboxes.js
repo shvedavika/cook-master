@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './EventsFilterCheckboxes.scss';
 import {connect} from "react-redux";
-import {eventFilterBy} from "../../../reducers/eventReducer";
+import {eventsFilterBy} from "../../../reducers/eventReducer";
 
 class EventsFilterCheckboxes extends React.Component {
   state = {
@@ -85,7 +85,7 @@ class EventsFilterCheckboxes extends React.Component {
 export default connect(
   null,
   dispatch => ({
-    eventFilterBy: (properties) => dispatch(eventFilterBy(properties)),
+    eventFilterBy: (properties) => dispatch(eventsFilterBy(properties)),
   })
 )(EventsFilterCheckboxes);
 

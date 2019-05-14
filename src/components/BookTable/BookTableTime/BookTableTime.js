@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-  import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './BookTableTime.scss';
 import {saveTime} from "../../../reducers/bookTableReducer";
 import {getCurrentDate} from "../../BookTable/BookTableCalendar/dateHelper";
@@ -28,7 +28,7 @@ function BookTableTime(props) {
     </section>
   );
 
-  function isTimeAvailable(from, to) {
+  function isTimeAvailable(from) {
     const currentDate = getCurrentDate();
     const currentHour = new Date().getHours();
 

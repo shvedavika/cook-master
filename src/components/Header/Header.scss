@@ -7,6 +7,7 @@
   height: 260px;
   font-size: 18px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   @include padding-left-right;
@@ -18,19 +19,17 @@
 
   &__logo {
     height: fit-content;
-    color: white;
+    color: black;
     z-index: 1;
     font-weight: bold;
     font-size: 45px;
     margin-top: 10px;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 50px;
-    background: #00000047;
-    padding: 5px;
-    @include sm {
-      background: #00000063;
-    }
+    border-radius: 15px;
+    background: #ffffffc2;
+    padding: 2px;
+    box-shadow: 0 0 15px lightgrey;
   }
 
   &__background {

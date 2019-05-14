@@ -10,11 +10,11 @@ export default function Header() {
   return(
     <header>
       <section className="home-header">
-        <Link to="/" className="home-header__logo">CookMaster</Link>
-        <img className="home-header__background" src={background1} alt="header"/>
-        <img className="home-header__background" src={background2} alt="header"/>
-        <img className="home-header__background" src={background3} alt="header"/>
-        <HeaderMenu/>
+          <Link to="/" className="home-header__logo">CookMaster</Link>
+          <img className="home-header__background" src={background1} alt="header"/>
+          <img className="home-header__background" src={background2} alt="header"/>
+          <img className="home-header__background" src={background3} alt="header"/>
+          <HeaderMenu/>
       </section>
     </header>
   )

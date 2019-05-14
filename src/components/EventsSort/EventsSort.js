@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventsSort.scss';
 import {connect} from "react-redux";
-import {eventSortBy} from "../../reducers/eventReducer";
+import {eventsSortBy} from "../../reducers/eventReducer";
 
 class EventsSort extends React.Component {
   handleClick = (e) => {
@@ -24,6 +24,6 @@ class EventsSort extends React.Component {
 export default connect(
   null,
   dispatch => ({
-    eventSortBy: (property) => dispatch(eventSortBy(property)),
+    eventSortBy: (property) => dispatch(eventsSortBy(property)),
   })
 )(EventsSort);

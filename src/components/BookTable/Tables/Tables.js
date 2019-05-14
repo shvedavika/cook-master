@@ -2,15 +2,14 @@ import React, {useEffect} from 'react';
 import {connect} from "react-redux";
 import './Tables.scss';
 import Table from "../Table/Table";
-import {saveSelectedTable, tablesLoadedSuccessfully} from "../../../reducers/bookTableReducer";
-import TABLES_FROM_BACKEND from "../../../reducers/tablesData";
+import {saveSelectedTable, loadTables} from "../../../reducers/bookTableReducer";
 
 const tablesLeft = [1, 2, 3, 4];
 const tablesRight = [5, 6, 7, 8];
 function Tables(props) {
-  const {tablesLoadedSuccessfully, bookedTables, date, time} = props;
+  const {loadTables, bookedTables, date, time} = props;
   useEffect(() => {
-    tablesLoadedSuccessfully(TABLES_FROM_BACKEND);
+    loadTables();
   }, []);
 
   return (
@@ -65,7 +64,7 @@ export default connect(
     selectedTable: state.tables.selectedTable,
   }),
   {
-    tablesLoadedSuccessfully,
+    loadTables,
     saveSelectedTable,
   }
 )(Tables);
