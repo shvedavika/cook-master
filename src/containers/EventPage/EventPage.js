@@ -18,9 +18,8 @@ export function EventPage(props) {
 
       <Breadcrumbs>
         <BreadcrumbsItem to="/events">Events</BreadcrumbsItem>
-        <BreadcrumbsItem to="">
-          {event && event.name}
-          {!event && '...'}
+        <BreadcrumbsItem>
+          {event ? event.name : '...'}
         </BreadcrumbsItem>
       </Breadcrumbs>
 

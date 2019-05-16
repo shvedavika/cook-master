@@ -3,6 +3,7 @@
 .about-us {
   font-size: 17px;
   &__header {
+    @include default-page-header;
     margin-top: 0;
   }
   &__text {

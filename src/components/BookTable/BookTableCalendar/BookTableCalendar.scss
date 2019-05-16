@@ -16,5 +16,9 @@
 
   &__field {
     font-size: 14px;
+    @include xs {
+      border: 1px solid lightgrey;
+      background: white;
+    }
   }
 }

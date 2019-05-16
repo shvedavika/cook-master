@@ -33,7 +33,7 @@ export default function(state = initialState, action){
       });
       const resultsEvents = events
         .filter((event) => event.name.toLowerCase().includes(enteredValue))
-        .map((event) => [`/events/${event.id}`, event.name]);
+        .map((event) => [`/event/${event.id}`, event.name]);
       return {
         ...state,
         enteredValue,

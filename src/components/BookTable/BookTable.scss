@@ -16,7 +16,7 @@
   }
 
   &__header {
-    margin-top: 0;
+    @include default-page-header;
   }
 
   &__summary {

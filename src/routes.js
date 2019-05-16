@@ -18,7 +18,7 @@ export default (
     <Route exact path="/" component={HomePage}/>
     <Route exact path="/about-us" component={AboutUsPage}/>
     <Route exact path="/events" component={EventsPage}/>
-    <Route exact path="/events/:id" component={EventPage}/>
+    <Route exact path="/event/:id" component={EventPage}/>
     <Route exact path="/menu" component={MenuPage}/>
     <Route exact path="/book-table" component={BookTablePage}/>
     <Route exact path="/book-table-success" component={BookTableSuccess}/>
