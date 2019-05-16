@@ -13,9 +13,11 @@
 
   &__text {
     background: #8080807d;
+
     @include md {
       font-size: 23px;
     }
+
     @include sm {
       display: none;
     }

@@ -27,14 +27,13 @@ export default function(state = initialState, action){
   switch(action.type){
     case DO_SEARCH : {
       const {query, events} = action.payload;
-      console.log(!!query);
       const enteredValue = query.toLowerCase();
       const resultsPages = Object.entries(state.searchData).filter(([key, item]) => {
         return item.toLowerCase().includes(enteredValue);
       });
       const resultsEvents = events
         .filter((event) => event.name.toLowerCase().includes(enteredValue))
-        .map((event) => [`/event/${event.id}`, event.name]);
+        .map((event) => [`/events/${event.id}`, event.name]);
       return {
         ...state,
         enteredValue,

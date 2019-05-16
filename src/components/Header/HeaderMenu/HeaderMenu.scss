@@ -13,8 +13,7 @@
   height: fit-content;
   z-index: 2;
   box-shadow: 0 0 15px lightgrey;
-  border-radius: 5px;
-  padding: 5px;
+  padding: 0;
   background: #ffffffc2;
 
   &__item {
@@ -35,8 +34,6 @@
     }
     &:hover .home-sub-menu {
       display: block;
-      position: absolute;
-      list-style: none;
     }
     @include sm {
       font-size: 24px;
@@ -46,11 +43,12 @@
 .home-sub-menu {
   display: none;
   width: max-content;
+  position: absolute;
+  list-style: none;
   line-height: 30px;
   padding: 0;
   background: #ffffffc2;
   box-shadow: 0 0 15px rgba(211, 211, 211, 0.77);
-  left: -5px;
   z-index: 1;
 
   &__item {

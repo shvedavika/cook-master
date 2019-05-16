@@ -1,0 +1,14 @@
+@import "../../Global";
+
+.contacts {
+  &__address-info {
+    margin-right: 50px;
+  }
+
+  @include md {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './BookTableCalendar.scss';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {saveDate} from "../../../reducers/bookTableReducer";
 import {getCurrentDate} from "./dateHelper";
 

@@ -30,7 +30,7 @@ const initialState = {
   tables: [],
   bookedTables: [],
   date: getCurrentDate(),
-  time: getCurrentTime(),
+  time: getCurrentTime() || '',
   selectedTable: null,
   order: {},
   isMockedDataLoaded: false,

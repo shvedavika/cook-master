@@ -1,7 +1,14 @@
 @import "../../Global";
 
-.search-container {
+.main-search {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  justify-content: flex-end;
   z-index: 1;
+  @include margin-around;
+
   &__field {
     font-size: 16px;
     outline: none;
@@ -16,6 +23,7 @@
     background: lightgrey;
     color: black;
   }
+
   @include sm {
     align-self: flex-end;
   }

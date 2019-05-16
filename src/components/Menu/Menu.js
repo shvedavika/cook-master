@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {connect} from "react-redux";
 import './Menu.scss';
 import MenuCategory from "./MenuCategory/MenuCategory";
 import menuFooterImage from './assets/menu-footer.jpg';
+import {loadMenu} from "../../reducers/menuReducer";
 
 function Menu(props) {
-  const menu = props.menu;
+  const {loadMenu, menu} = props;
+
+  useEffect(() => {
+    loadMenu();
+  }, []);
+  
   return(
     <>
       <h2 className="menu-header">Menu</h2>
@@ -20,4 +26,7 @@ export default connect(
   state => ({
     menu: state.menu.menu,
   }),
+  {
+    loadMenu,
+  }
 )(Menu);

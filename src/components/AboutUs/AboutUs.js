@@ -20,9 +20,8 @@ export default function AboutUs() {
       </p>
       <p className="about-us__text about-us__text--hidden-small">
         One of the best chefs in Ukraine rules the kitchen. According to his opinion, the restaurant menu is indirectly
-        related to the traditional Ukraine cuisine. All the dishes – designer’s and gastronomic – created on the
-        principle of interesting and complex combinations of ingredients. The menu is updated on monthly basis for the
-        visitors to enjoy seasonal products served in a very non-standard way.
+        related to the traditional Ukraine cuisine. The menu is updated on monthly basis for the visitors to enjoy
+        seasonal products served in a very non-standard way.
       </p>
       <p className="about-us__text--hidden-small">
         We propose a comfortable area with modern gadgets and games is arranged for children where professional

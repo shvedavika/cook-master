@@ -2,59 +2,44 @@
 
 .home-container {
   max-width: 1200px;
+  min-height: calc(100% - 315px);
   margin: auto auto 0;
-  min-height: 450px;
-}
-.navigation {
-  position: relative;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  @include margin-around;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  align-items: center;
-  @include xs {
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  @include padding-around;
 }
+
 .events-container {
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 40px 5%;
+  padding-top: 40px;
   @include md {
     flex-direction: column;
-    justify-content: space-between;
-    padding: 50px;
+    @include padding-around;
     position: relative;
   }
 }
-.menu-container {
-  min-height: 500px;
-  padding: 0 5% 40px;
-}
+
 .book-table-container {
-  display: flex;
   flex-direction: row;
   justify-content: center;
-  @include padding-around;
   padding-top: 0;
   @include md {
     padding: 0 3%;
   }
 }
+
 .contacts-container {
-  @include padding-around;
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+
   @include md {
     flex-direction: column;
   }
 }
-.event-container {
-  @include padding-around;
+
+.search-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }

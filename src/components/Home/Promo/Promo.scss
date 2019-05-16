@@ -20,6 +20,7 @@
 
   &__header {
     @include default-page-header;
+    margin-top: 0;
   }
 }
 

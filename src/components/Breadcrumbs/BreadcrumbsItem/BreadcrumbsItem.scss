@@ -1,28 +1,20 @@
-.breadcrumb {
-  display: inline-block;
-  list-style: none;
+.breadcrumbsLink {
+  text-decoration: none;
   color: black;
+  cursor: pointer;
+  &:last-child {
+    cursor: default;
+  }
+  &:not(:last-child):hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: black;
+  }
   &:not(:last-child):after {
     content: '/';
-    display: inline;
-    margin: 0 4px;
-  }
-  &__link {
-    color: black;
-    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-    &--active {
-      text-decoration: none;
-      cursor: default;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    &:active {
-      color: black;
-    }
   }
 }

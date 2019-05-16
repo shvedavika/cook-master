@@ -1,15 +1,11 @@
 @import "../../../Global";
 
 .top-dishes {
-  &__dishes{
+  &__dishes {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-  }
-
-  &__container {
-    @include padding-around;
   }
 }
 
@@ -19,6 +15,7 @@
   width: 250px;
   align-items: center;
   text-align: center;
+
   @include xs {
     &:not(:last-child) {
       margin-bottom: 20px;

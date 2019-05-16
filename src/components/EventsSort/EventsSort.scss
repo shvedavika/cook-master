@@ -3,9 +3,15 @@
 .events-sort {
   align-self: flex-start;
   font-size: 15px;
+  border: 1px solid lightgrey;
   outline: none;
+
   @include md {
     position: absolute;
-    right: 50px;
+    right: 3%;
+  }
+
+  @include sm {
+    right: 7%
   }
 }

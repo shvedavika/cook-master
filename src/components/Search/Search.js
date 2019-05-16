@@ -27,9 +27,9 @@ function Search(props) {
   }
 
   return (
-    <section className="search-container">
-      <input className="search-container__field" value={value} onChange={handleChange} onKeyDown={handleKeyDown}/>
-      <button className="search-container__button" onClick={handleSearch}>search</button>
+    <section className="main-search">
+      <input className="main-search__field" value={value} onChange={handleChange} onKeyDown={handleKeyDown}/>
+      <button className="main-search__button" onClick={handleSearch}>search</button>
     </section>
   )
 }

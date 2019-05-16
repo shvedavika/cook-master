@@ -1,0 +1,188 @@
+[
+  {
+    "id": "starters",
+    "categoryName": "Starters",
+    "items": [
+      {
+        "id": "starters1",
+        "name": "Tomato soup",
+        "gram": 250,
+        "price": 2.90
+      },
+      {
+        "id": "starters2",
+        "name": "French onion soup",
+        "gram": 250,
+        "price": 2.90
+      },
+      {
+        "id": "starters3",
+        "name": "Tomato salad",
+        "gram": 200,
+        "price": 2.75
+      },
+      {
+        "id": "starters4",
+        "name": "Chicken salad",
+        "gram": 200,
+        "price": 2.75
+      }
+    ]
+  },
+  {
+    "id": "mainCourses",
+    "categoryName": "Main courses",
+    "items": [
+      {
+        "id": "main1",
+        "name": "German sausage and chips",
+        "gram": 300,
+        "price": 6.50
+      },
+      {
+        "id": "main2",
+        "name": "Grilled fish and potatoes",
+        "gram": 250,
+        "price": 6.50
+      },
+      {
+        "id": "main3",
+        "name": "Italian cheese & tomato pizza",
+        "gram": 180,
+        "price": 4.85
+      },
+      {
+        "id": "main4",
+        "name": "Thai chicken and rice",
+        "gram": 220,
+        "price": 5.95
+      },
+      {
+        "id": "main5",
+        "name": "Vegatable pasta",
+        "gram": 220,
+        "price": 4.85
+      },
+      {
+        "id": "main6",
+        "name": "Roast chicken and potatoes",
+        "gram": 250,
+        "price": 5.95
+      }
+    ]
+  },
+  {
+    "id": "snacks",
+    "categoryName": "Snacks",
+    "items": [
+      {
+        "id": "snacks1",
+        "name": "Cheese Burger",
+        "gram": 150,
+        "price": 3.20
+      },
+      {
+        "id": "snacks2",
+        "name": "Vegetable omelette",
+        "gram": 200,
+        "price": 3.25
+      },
+      {
+        "id": "snacks3",
+        "name": "Chocolate cake",
+        "gram": 100,
+        "price": 2.25
+      },
+      {
+        "id": "snacks4",
+        "name": "Cheese & tomato sandwich",
+        "gram": 120,
+        "price": 3.25
+      },
+      {
+        "id": "snacks5",
+        "name": "Burger",
+        "gram": 220,
+        "price": 2.90
+      },
+      {
+        "id": "snacks6",
+        "name": "Chicken sandwich",
+        "gram": 150,
+        "price": 3.50
+      },
+      {
+        "id": "snacks7",
+        "name": "Cheese omelette",
+        "gram": 210,
+        "price": 3.50
+      }
+    ]
+  },
+  {
+    "id": "desserts",
+    "categoryName": "Desserts",
+    "items": [
+      {
+        "id": "desserts1",
+        "name": "Fruit salad and cream",
+        "gram": 130,
+        "price": 2.25
+      },
+      {
+        "id": "desserts2",
+        "name": "Ice cream",
+        "gram": 80,
+        "price": 2.00
+      },
+      {
+        "id": "desserts3",
+        "name": "Lemon cake",
+        "gram": 100,
+        "price": 2.25
+      },
+      {
+        "id": "desserts4",
+        "name": "Cheese & biscuits",
+        "gram": 160,
+        "price": 2.50
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "categoryName": "Drinks",
+    "items": [
+      {
+        "id": "drinks1",
+        "name": "Mineral water",
+        "gram": 200,
+        "price": 1.00
+      },
+      {
+        "id": "drinks2",
+        "name": "Fresh orange juice",
+        "gram": 200,
+        "price": 1.25
+      },
+      {
+        "id": "drinks4",
+        "name": "Soft drinks",
+        "gram": 200,
+        "price": 1.30
+      },
+      {
+        "id": "drinks5",
+        "name": "English tea",
+        "gram": 200,
+        "price": 0.90
+      },
+      {
+        "id": "drinks6",
+        "name": "Irish cream tea",
+        "gram": 200,
+        "price": 0.90
+      }
+    ]
+  }
+]

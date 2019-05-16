@@ -1,6 +1,7 @@
+@import './../../Global';
+
 .breadcrumbs {
-  padding-left: 0;
-}
-.breadcrumbs-container {
-  align-self: flex-start;
+ @include margin-around;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

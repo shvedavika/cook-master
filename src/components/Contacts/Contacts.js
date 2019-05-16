@@ -3,8 +3,8 @@ import './Contacts.scss';
 
 export default function Contacts() {
   return (
-    <section>
-      <article>
+    <section className="contacts">
+      <article className="contacts__address-info">
         <h3>Address</h3>
         <p>Oleksandra Myshuhy St, 4</p>
       </article>
